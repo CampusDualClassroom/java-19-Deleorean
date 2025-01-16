@@ -39,15 +39,15 @@ public class Exercise19 {
 
 
     public static int[][] flatTridimensionalArray(int[][][] intArrayTri) {
-        int v = intArrayTri.length;
-        int b = intArrayTri[0].length;
-        int w = intArrayTri[0][0].length;
+        int depth = intArrayTri.length;
+        int rows = intArrayTri[0].length;
+        int columns = intArrayTri[0][0].length;
 
-        int[][] flatArray = new int[b][w];
+        int[][] flatArray = new int[rows][columns];
 
-        for (int i = 0; i < v; i++) {
-            for (int j = 0; j < b; j++) {
-                for (int k = 0; k < w; k++) {
+        for (int i = 0; i < depth; i++) {
+            for (int j = 0; j < rows; j++) {
+                for (int k = 0; k < columns; k++) {
                     flatArray[j][k] += intArrayTri[i][j][k];
                 }
             }
