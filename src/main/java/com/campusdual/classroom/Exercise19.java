@@ -94,8 +94,8 @@ public class Exercise19 {
     public static int[][] createAndPopulateBidimensionalArray(int rows, int columns) {
         int[][] biArray = new int[rows][columns];
         int contador = 1;
-        for (int i = 0; i < biArray.length; i++) {
-            for (int j = 0; j < biArray[i].length; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 biArray[i][j] = contador++;
             }
         }
@@ -106,9 +106,9 @@ public class Exercise19 {
     public static int[][][] createAndPopulateTridimensionalArray(int depth, int rows, int columns) {
         int[][][] triArray = new int[depth][rows][columns];
         int contador = 1;
-        for (int i = 0; i < triArray.length; i++) {
-            for (int j = 0; j < triArray[i].length; j++) {
-                for (int k = 0; k < triArray[i][j].length; k++) {
+        for (int i = 0; i < depth; i++) {
+            for (int j = 0; j < rows; j++) {
+                for (int k = 0; k < columns; k++) {
                     triArray[i][j][k] = contador++;
                 }
             }
